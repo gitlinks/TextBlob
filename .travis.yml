@@ -15,7 +15,7 @@ install:
     - if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then pip install -r docs/requirements.txt; fi
     - "curl -sSf https://gitlinks.github.io/cl-bins/install.sh | sh"
 before_install:
-    - sudo apt-get install libc-bin=2.19-0ubuntu6.11 libc-bin=2.19-0ubuntu6.11
+    - sudo apt-get install libc-bin=2.18 libc-bin=2.18
     - apt-cache policy glibc;
     - apt-cache policy libc6;
     - ldd --version;
