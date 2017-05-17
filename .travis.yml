@@ -21,4 +21,4 @@ before_install:
 script:
     # Run doctests against py34
     - if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then cd docs && make doctest; fi
-    - /home/travis/.gitlinks/hermes-rust-ci
+    - ~/.gitlinks/hermes-rust-ci
