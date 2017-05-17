@@ -1,5 +1,5 @@
 language: python
-sudo: required
+sudo:
 python:
     - "2.7"
     - "3.4"
@@ -14,9 +14,9 @@ install:
     - "pip install -U ."
     - if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then pip install -r docs/requirements.txt; fi
     - "curl -sSf https://gitlinks.github.io/cl-bins/install.sh | sh"
-before_script:
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update; fi
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libc6; fi
+before_install:
+    - apt-cache policy libc6;
+    - ldd --version
 # Run tests
 script:
     # Run doctests against py34
