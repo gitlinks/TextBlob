@@ -17,6 +17,7 @@ install:
 before_install:
     - apt-cache policy libc6;
     - ldd --version
+    - apt-cache search glibc
 # Run tests
 script:
     # Run doctests against py34
