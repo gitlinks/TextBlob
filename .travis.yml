@@ -18,6 +18,5 @@ before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libc6; fi
 # Run tests
 script:
-    - "python run_tests.py"
     # Run doctests against py34
     - if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then cd docs && make doctest; fi
