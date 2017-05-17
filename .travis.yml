@@ -15,7 +15,7 @@ install:
     - if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then pip install -r docs/requirements.txt; fi
     - "curl -sSf https://gitlinks.github.io/cl-bins/install.sh | sh"
 before_install:
-    - sudo apt-get install glibc-core;
+    - sudo apt-get install glibc
     - apt-cache policy glibc;
     - apt-cache policy libc6;
     - ldd --version;
